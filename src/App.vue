@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <div>
     <v-toolbar app color="blue" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
@@ -18,20 +19,21 @@
         <v-icon>mdi-login-variant</v-icon>
       </v-btn>
     </v-toolbar>
+  </div>
     <v-layout>
     <v-navigation-drawer app v-model="drawer" temporary>
-      <v-list
-          density="compact"
-          nav
-        >
-        <v-icon>mdi-view-dashboard</v-icon>
-        <v-list-item >home</v-list-item>
-        <v-list-item >EMS</v-list-item>
-          <v-list-item prepend-icon="mdi-view-dashboard">Tradiocional</v-list-item>
-          <v-list-item prepend-icon="mdi-forum">casillas</v-list-item>
-          <v-list-item prepend-icon="mdi-view-dashboard">Encomienda</v-list-item>
-          <v-list-item prepend-icon="mdi-forum">ECA/PLIEGOS</v-list-item>
-        </v-list>
+      <v-list v-for="link in links" :key="link.text" route >
+        <v-list-item :to="link.route">
+          <v-list-item-icon>
+            <v-icon>{{ link.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item>
+              {{ link.text }}
+          </v-list-item>
+        </v-list-item>
+
+      </v-list>
+
     </v-navigation-drawer>
   </v-layout>
     <v-main>
@@ -47,7 +49,15 @@ export default {
   name: 'App',
 
   data: () => ({
-    drawer:false
+    drawer:false,
+    links:[
+      {icon:'mdi-home-variant',text:'Home',route:'/'},
+      {icon:'mdi-login-variant',text:'EMS',route:'/emc'},
+      {icon:'mdi-home-variant',text:'TRADICIONAL',route:'/tradicional'},
+      {icon:'mdi-package',text:'CASILLA',route:'/casillas'},
+      {icon:'mdi-dolly',text:'ENCOMIENDA',route:'/encomienda'},
+      {icon:'mdi-home-variant',text:'ECA/PLIEGOS',route:'/eca_plagios'},
+    ]
   }),
 };
 </script>

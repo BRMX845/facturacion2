@@ -7,11 +7,11 @@
       <v-toolbar-title>Facturacion</v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <v-btn icon>
+      <v-btn icon to="/Register">
         <v-icon>mdi-account-plus</v-icon>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn icon to="/Login">
         <v-icon>mdi-account</v-icon>
       </v-btn>
 

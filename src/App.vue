@@ -19,6 +19,11 @@
         <v-icon>mdi-login-variant</v-icon>
       </v-btn>
     </v-toolbar>
+        <v-main>
+          <router-view />
+        </v-main>
+      
+      
   </div>
     <v-layout>
     <v-navigation-drawer app v-model="drawer" temporary>
@@ -36,9 +41,6 @@
 
     </v-navigation-drawer>
   </v-layout>
-    <v-main>
-      <router-view />
-    </v-main>
   </v-app>
 </template>
 
@@ -52,11 +54,11 @@ export default {
     drawer:false,
     links:[
       {icon:'mdi-home-variant',text:'Home',route:'/'},
-      {icon:'mdi-login-variant',text:'EMS',route:'/emc'},
+      {icon:'mdi-login-variant',text:'EMS',route:'/ems'},
       {icon:'mdi-home-variant',text:'TRADICIONAL',route:'/tradicional'},
       {icon:'mdi-package',text:'CASILLA',route:'/casillas'},
-      {icon:'mdi-dolly',text:'ENCOMIENDA',route:'/encomienda'},
-      {icon:'mdi-home-variant',text:'ECA/PLIEGOS',route:'/eca_plagios'},
+      {icon:'mdi-dolly',text:'ENCOMIENDA',route:'/encomiendas'},
+      {icon:'mdi-home-variant',text:'ECA/PLIEGOS',route:'/ecaplagios'},
     ]
   }),
 };

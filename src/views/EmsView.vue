@@ -4,18 +4,10 @@
             <v-flex>
                 <v-card>
                     <v-card-title>
-                        Casillas
+                        EMS
                     </v-card-title>
                     <v-card-text>
                         <v-data-table :headers="headers">
-                            <thead>
-                                <th class="text-left">
-                                    Name
-                                </th>
-                                <th class="text-left">
-                                    calorias
-                                </th>
-                            </thead>
                             <tbody>
                                 <tr
                                     v-for="item in desserts"

@@ -1,11 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import CasillasView from '../views/CasillasView.vue'
-import EMSView from '../views/EmsView.vue'
-import EncomiendasView from '../views/encomiendaView.vue'
-import EcaPlagiosView from '../views/eca_plagiosView.vue'
-import TradicionalView from '../views/tradicionalView.vue'
+import FacturacionView from '../views/FactView.vue'
 import LoginView from '../views/LoginView.vue'
 Vue.use(VueRouter)
 
@@ -21,34 +17,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: '/casillas',
-    name: 'casillas',
-    component: CasillasView,
+    path: '/facturacion',
+    name: 'facturacion',
+    component: FacturacionView,
   },
   {
-    path: '/ems',
-    name: 'EMS',
-    component: EMSView,
-  },
-  {
-    path: '/encomiendas',
-    name: 'encomiendas',
-    component: EncomiendasView,
-  },
-  {
-    path: '/ecaplagios',
-    name: 'ecaplagios',
-    component: EcaPlagiosView,
-  },
-  {
-    path: '/tradicional',
-    name: 'tradicional',
-    component: TradicionalView,
-  },
-  {
-    path: '/Login',
-    name: 'login',
-    component: LoginView,
+    path:'/Login',
+    name:'login',
+    component:LoginView,
   },
 ]
 

@@ -6,12 +6,22 @@
             <v-card-title class="text-center">Inicio de sesión</v-card-title>
             <v-form @submit.prevent="login">
               <v-card-text>
-                <v-text-field v-model="email" label="Correo electrónico" required></v-text-field>
+                <div class="text-center">
+                  <v-avatar
+                    color="blue"
+                    size="250"
+                  >
+                    <v-icon size="128" color="withe" dark>
+                      mdi-account
+                    </v-icon>
+                  </v-avatar>
+                </div>
+                <v-text-field v-model="email" label="Nombre de usuario" required></v-text-field>
                 <v-text-field v-model="password" label="Contraseña" type="password" required></v-text-field>
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn type="submit" color="primary">Iniciar sesión</v-btn>
+                <v-btn type="submit" color="primary" to="/facturacion">Iniciar sesión</v-btn>
                 <v-spacer></v-spacer>
               </v-card-actions>
             </v-form>

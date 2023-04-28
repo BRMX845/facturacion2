@@ -116,6 +116,7 @@
                         <div class="d-flex flex-column mb-6 bg-surface-variant">
                             <v-data-table :headers="headers">
                             </v-data-table>
+                            <h1>Total:</h1>
                             <v-actions>
                                 <div class="d-flex align-content-end flex-wrap bg-surface-variant">
                                 <v-btn>
@@ -161,6 +162,7 @@
                         <div class="d-flex flex-column mb-6 bg-surface-variant">
                             <v-data-table :headers="headers">
                             </v-data-table>
+                            <h1>Total:</h1>
                             <v-actions>
                                 <div class="d-flex align-content-end flex-wrap bg-surface-variant">
                                 <v-btn>
@@ -207,6 +209,7 @@
                         <div class="d-flex flex-column mb-6 bg-surface-variant">
                             <v-data-table :headers="headers">
                             </v-data-table>
+                            <h1>Total:</h1>
                             <v-actions>
                                 <div class="d-flex align-content-end flex-wrap bg-surface-variant">
                                 <v-btn>
@@ -252,11 +255,11 @@ export default {
         seleciontab:0,
         saludo:"hola",
         links:[
-      {icon:'mdi-login-variant',text:'EMS',value:1},
-      {icon:'mdi-home-variant',text:'TRADICIONAL',value:2},
-      {icon:'mdi-package',text:'CASILLA',value:3},
-      {icon:'mdi-dolly',text:'ENCOMIENDA',value:4},
-      {icon:'mdi-home-variant',text:'ECA/PLIEGOS',value:5},
+      {icon:'mdi-login-variant',text:'EMS',tab:1},
+      {icon:'mdi-home-variant',text:'TRADICIONAL',tab:2},
+      {icon:'mdi-package',text:'CASILLA',tab:3},
+      {icon:'mdi-dolly',text:'ENCOMIENDA',tab:4},
+      {icon:'mdi-home-variant',text:'ECA/PLIEGOS',tab:5},
     ],
       headers: [
         { text: 'Cantidad', value: 'cantidad' },

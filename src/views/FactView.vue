@@ -24,26 +24,26 @@
                             </div>
                             <div v-if="seleciontab===1">
                                 <v-card-actions>
-                                <v-btn color="primary">Ordinario</v-btn>
-                                <v-btn color="primary">Certificado</v-btn>
+                                <v-btn color="primary" @click="agregar_ordinario">Ordinario</v-btn>
+                                <v-btn color="primary" @click="agregar_cert">Certificado</v-btn>
                                 </v-card-actions>
                             </div>
                             <div v-if="seleciontab===2">
                                 <v-card-actions>
-                                    <v-btn color="primary">Recaudacion</v-btn>
+                                    <v-btn color="primary" @click="agregar_recaudacion">Recaudacion</v-btn>
                                 </v-card-actions>
                             </div>
                             <div v-if="seleciontab===3">
                                 <v-card-actions>
-                                    <v-btn color="primary">Almacenaje</v-btn>
-                                    <v-btn color="primary">Envio</v-btn>
+                                    <v-btn color="primary" @click="agregar_almacenaje" >Almacenaje</v-btn>
+                                    <v-btn color="primary" @click="agregar_envio_en">Envio</v-btn>
                                 </v-card-actions>
                             </div>
                             <div v-if="seleciontab===4">
                                 <v-card-actions>
-                                    <v-btn color="primary">Ordinario</v-btn>
-                                    <v-btn color="primary">Certificado</v-btn>
-                                    <v-btn color="primary">Almacenaje</v-btn>
+                                    <v-btn color="primary" @click="agregar_ordinario_pliegos" >Ordinario</v-btn>
+                                    <v-btn color="primary" @click="agregar_cert_pliegos">Certificado</v-btn>
+                                    <v-btn color="primary" @click="agregar_almacenaje_pliegos">Almacenaje</v-btn>
                                 </v-card-actions>
                             </div>
                         </v-card-col>
@@ -123,42 +123,47 @@ methods: {
     },
     agregar_envio() {
       this.lista.push({
-        cantidad: '',
-        precio: '',
-        importe: '',
         concepto:'ENVIO',
       });
     },
     agregar_ordinario() {
       this.lista.push({
-        cantidad: '',
-        precio: '',
-        importe: '',
         concepto:'ORDINARIO',
       });
     },
     agregar_cert() {
       this.lista.push({
-        cantidad: 'CERTIFICADO',
-        precio: '',
-        importe: '',
-        concepto:'',
+        concepto:'CERTIFICADO',
       });
     },
     agregar_recaudacion() {
       this.lista.push({
-        cantidad: '',
-        precio: '',
-        importe: '',
         concepto:'RECAUDACION',
       });
     },
     agregar_almacenaje() {
       this.lista.push({
-        cantidad: '',
-        precio: '',
-        importe: '',
-        concepto:'ALMACENAJE',
+        concepto:'ALMACENAJE-ENCOMIENDA',
+      });
+    },
+    agregar_envio_en() {
+      this.lista.push({
+        concepto:'ENVIO-ENCOMIENDA',
+      });
+    },
+    agregar_ordinario_pliegos() {
+      this.lista.push({
+        concepto:'ORDINARIO-ECA/PLIEGOS',
+      });
+    },
+    agregar_cert_pliegos() {
+      this.lista.push({
+        concepto:'CERTIFICADO-ECA/CLIEGOS',
+      });
+    },
+    agregar_almacenaje_pliegos() {
+      this.lista.push({
+        concepto:'ALMACENAJE-ECA/PLIEGOS',
       });
     },
     },

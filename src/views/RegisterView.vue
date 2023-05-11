@@ -10,7 +10,7 @@
                         <v-text-field label="Nombre" v-model="name" required rounded></v-text-field>
                         <v-text-field label="Correo electrónico" v-model="email" required rounded></v-text-field>
                         <v-text-field label="Carnet de Identidad" v-model="ci" required rounded></v-text-field>
-                        <v-autocomplete label="Cargo" auto-select-first clearable rounded></v-autocomplete>
+                        <v-autocomplete label="Departamento" auto-select-first clearable rounded></v-autocomplete>
                         <v-text-field label="Contraseña" v-model="password" type="password" required rounded></v-text-field>
                         <v-text-field label="Confirmar contraseña" v-model="confirmPassword" type="password" required rounded></v-text-field>
                         <v-card-actions>

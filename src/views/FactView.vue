@@ -88,12 +88,14 @@
                                 </v-btn>
                                 <template>
                                   <div>
-                                    <v-dialog v-model="Pagarwn" width="1024">
+                                    <v-dialog v-model="Pagarwn" width="2048">
                                       <v-card>
                                         <v-card-title>
                                           Pagar
                                         </v-card-title>
-                                        <v-flex class="d-flex justify-space-around pa-2 ma-2 bg-surface-variant">
+                                        <v-container>
+                                          <v-layout>
+                                        <v-flex xs12>
                                           <v-card>
                                             <v-card-title>Factura</v-card-title>
                                             <v-card-text>
@@ -103,6 +105,8 @@
                                             <v-text-field label="fecha limite de emision" type="date" rounded></v-text-field>
                                           </v-card-text>
                                           </v-card>
+                                        </v-flex>
+                                        <v-flex xs12>
                                           <v-card>
                                             <v-card-title>Tasas de cambio</v-card-title>
                                               <v-card-text>
@@ -111,7 +115,9 @@
                                               <v-text-field label="UFV"  required rounded></v-text-field>
                                               </v-card-text>
                                           </v-card>
-                                        </v-flex>>
+                                        </v-flex>
+                                      </v-layout>
+                                      </v-container>
                                         <v-card>
                                           <v-card-title>
                                             <span class="headline">Casa Matriz/SERVICIOS Y/O ACTIVIIDADES SUJETAS A IVA</span>
